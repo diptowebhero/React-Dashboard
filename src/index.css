@@ -11,11 +11,11 @@
 }
 
 .sidebar-menu-item {
-  @apply relative flex items-center gap-3 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4;
+  @apply relative flex items-center gap-3 rounded-sm py-2 px-4 font-medium text-black  hover:bg-slate-300 duration-300 ease-in-out dark:text-bodyDark1 dark:hover:bg-meta-4;
 }
 
 .sidebar-submenu-item {
-  @apply relative flex items-center gap-3 rounded-sm py-2 px-12 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4;
+  @apply relative flex items-center gap-3 rounded-sm py-2 px-12 font-medium duration-300 ease-in-out text-black hover:bg-slate-300 dark:text-bodyDark1  dark:hover:bg-meta-4;
 }
 
 /* Sidebar style end*/
@@ -23,7 +23,7 @@
 /* Drop Down style start*/
 
 .dropdown {
-  @apply absolute right-0 mt-4 flex w-60 flex-col rounded-sm border border-stroke bg-white shadow dark:border-strokedark dark:bg-boxdark -translate-y-96 transition-all duration-500 ease-linear;
+  @apply absolute right-0 mt-4 flex w-60 flex-col rounded-sm border border-stroke bg-white shadow dark:border-strokedark dark:bg-boxDark -translate-y-96 transition-all duration-500 ease-linear;
 }
 
 .dropdown-content {

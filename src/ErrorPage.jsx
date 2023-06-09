@@ -13,7 +13,7 @@ const ErrorPage = () => {
           <i>{error.statusText || error.message}</i>
         </p>
         <Link to="/">
-          <button className="btn bg-boxdark my-4 rounded py-2 text-white px-6">
+          <button className="btn bg-boxDark my-4 rounded py-2 text-white px-6">
             Back Home
           </button>
         </Link>

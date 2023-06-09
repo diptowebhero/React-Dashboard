@@ -9,7 +9,7 @@ const DashboardLayout = () => {
 
   return (
     <>
-      <div className="dark:bg-boxdark-2 dark:text-bodydark">
+      <div className="bg-white text-white dark:bg-boxDark-2 dark:text-bodyDark">
         {/* <!-- ===== Page Wrapper Start ===== --> */}
         <div className="flex h-screen overflow-hidden">
           {/* <!-- ===== Sidebar Start ===== --> */}

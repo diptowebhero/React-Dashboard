@@ -17,7 +17,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   const [isOpen, setOpen] = useState(false);
   return (
     <aside
-      className={`absolute left-0 top-0 z-10 flex h-screen w-72 flex-col overflow-y-hidden dark:bg-boxdark shadow-lg duration-300 ease-linear  lg:static lg:translate-x-0 ${
+      className={`absolute left-0 top-0 z-10 flex h-screen w-72 flex-col overflow-y-hidden 
+      
+      dark:bg-boxDark shadow-lg duration-300 ease-linear  lg:static lg:translate-x-0 ${
         sidebarOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
@@ -53,7 +55,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
       <div className="sidebar-head">
         {/* <!-- Sidebar Menu --> */}
         <nav className="sidebar-nav">
-          <h3 className="mb-4 ml-4 text-sm font-semibold text-bodydark2">
+          <h3 className="mb-4 ml-4 text-sm font-semibold text-bodyDark2">
             MENU
           </h3>
           {/* <!-- Menu Group --> */}
@@ -81,15 +83,15 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                 {/* submenu item*/}
                 <ul
                   className={`overflow-hidden transition-height duration-300 ease-in-out ${
-                    isOpen ? "h-20" : "h-0"
+                    isOpen ? "h-24" : "h-0"
                   }`}
                 >
-                  <li>
+                  <li className="mb-2">
                     <NavLink
                       to="/dashboard/analytics"
                       className={`sidebar-submenu-item ${
                         pathname.includes("analytics") &&
-                        "bg-graydark dark:bg-meta-4"
+                        "bg-slate-300 dark:bg-meta-4"
                       }`}
                     >
                       Analytics
@@ -100,7 +102,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                       to="/ecommerce"
                       className={`sidebar-submenu-item ${
                         pathname.includes("ecommerce") &&
-                        "bg-graydark dark:bg-meta-4"
+                        "bg-slate-300 dark:bg-meta-4"
                       }`}
                     >
                       E-Commerce
@@ -117,7 +119,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                   to="/dashboard/userHome"
                   className={`sidebar-menu-item ${
                     pathname.includes("userHome") &&
-                    "bg-graydark dark:bg-meta-4"
+                    "bg-slate-300 dark:bg-meta-4"
                   }`}
                 >
                   <AiFillHome className="w-5 h-5" />
@@ -131,7 +133,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                 <NavLink
                   to="/dashboard/payment"
                   className={`sidebar-menu-item ${
-                    pathname.includes("payment") && "bg-graydark dark:bg-meta-4"
+                    pathname.includes("payment") && "bg-slate-300 dark:bg-meta-4"
                   }`}
                 >
                   <MdPayment className="w-5 h-5" />
@@ -145,7 +147,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                 <NavLink
                   to="/dashboard/payment"
                   className={`sidebar-menu-item ${
-                    pathname.includes("review") && "bg-graydark dark:bg-meta-4"
+                    pathname.includes("review") && "bg-slate-300 dark:bg-meta-4"
                   }`}
                 >
                   <MdReviews className="w-5 h-5" />
@@ -159,7 +161,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                 <NavLink
                   to="/dashboard/myCart"
                   className={`sidebar-menu-item ${
-                    pathname.includes("myCart") && "bg-graydark dark:bg-meta-4"
+                    pathname.includes("myCart") && "bg-slate-300 dark:bg-meta-4"
                   }`}
                 >
                   <BsFillCartFill className="w-5 h-5" />
@@ -174,7 +176,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                   to="/myCart"
                   className={`sidebar-menu-item ${
                     pathname.includes("calendar") &&
-                    "bg-graydark dark:bg-meta-4"
+                    "bg-slate-300 dark:bg-meta-4"
                   }`}
                 >
                   <BsBuildingFillAdd className="w-5 h-5" />
@@ -187,7 +189,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
 
           {/* <!-- Others Group --> */}
           <div>
-            <h3 className="mb-4 ml-4 text-sm font-semibold text-bodydark2">
+            <h3 className="mb-4 ml-4 text-sm font-semibold text-bodyDark2">
               OTHERS
             </h3>
 
@@ -197,7 +199,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                 <NavLink
                   to="/"
                   className={`sidebar-menu-item ${
-                    pathname.includes("home") && "bg-graydark dark:bg-meta-4"
+                    pathname.includes("home") && "bg-slate-300 dark:bg-meta-4"
                   }`}
                 >
                   <AiFillHome className="w-5 h-5" />
@@ -211,7 +213,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                 <NavLink
                   to="/menu"
                   className={`sidebar-menu-item ${
-                    pathname.includes("menu") && "bg-graydark dark:bg-meta-4"
+                    pathname.includes("menu") && "bg-slate-300 dark:bg-meta-4"
                   }`}
                 >
                   <BiMenuAltRight className="w-5 h-5" />
@@ -224,8 +226,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
               <li>
                 <NavLink
                   to="/order/salad"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                    pathname.includes("order") && "bg-graydark dark:bg-meta-4"
+                  className={`sidebar-menu-item ${
+                    pathname.includes("order") && "bg-slate-300 dark:bg-meta-4"
                   }`}
                 >
                   <AiFillShopping className="w-5 h-5" />
@@ -239,7 +241,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                 <NavLink
                   to="/contact"
                   className={`sidebar-menu-item ${
-                    pathname.includes("contact") && "bg-graydark dark:bg-meta-4"
+                    pathname.includes("contact") && "bg-slate-300 dark:bg-meta-4"
                   }`}
                 >
                   <MdEmail className="w-5 h-5" />

@@ -9,8 +9,10 @@ const Header = ({
   // eslint-disable-next-line react/prop-types
   setSidebarOpen,
 }) => {
+
+
   return (
-    <header className="sticky top-0 z-999 flex w-full bg-dark drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none">
+    <header className="sticky top-0 bg:white shadow-lg flex w-full drop-shadow-1 dark:bg-boxDark dark:drop-shadow-none">
       <div className="flex flex-grow items-center justify-between py-4 px-4 shadow-2 md:px-6 2xl:px-11">
         <div className="flex items-center gap-2 sm:gap-4 lg:hidden">
           {/* <!-- Hamburger Toggle BTN --> */}
@@ -20,7 +22,7 @@ const Header = ({
               e.stopPropagation();
               setSidebarOpen(!sidebarOpen);
             }}
-            className="z-99999 block rounded-sm border p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark lg:hidden"
+            className="block rounded-sm border p-1.5 shadow-sm dark:border-strokedark dark:bg-boxDark lg:hidden"
           >
             <span className="relative block h-5 w-5.5 cursor-pointer">
               <AiOutlineMenuFold
@@ -42,7 +44,7 @@ const Header = ({
             <div className="relative">
               <button className="absolute top-1/2 left-0 -translate-y-1/2">
                 <svg
-                  className="fill-body hover:fill-primary dark:fill-bodydark dark:hover:fill-primary"
+                  className="fill-body hover:fill-primary dark:fill-bodyDark dark:hover:fill-primary"
                   width="20"
                   height="20"
                   viewBox="0 0 20 20"
@@ -74,7 +76,7 @@ const Header = ({
         </div>
         <div className="flex items-center gap-3 2xsm:gap-7">
 
-
+                
            {/* <!-- User Area --> */}
            <DropdownUser />
           {/* <!-- User Area --> */}
