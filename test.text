@@ -1,0 +1,63 @@
+<ul className="mb-6 flex flex-col gap-1.5">
+                {/* <!-- Admin Home --> */}
+                <li>
+                  <NavLink
+                    to="/dashboard/adminHome"
+                    className={`group relative flex items-center gap-3 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                      pathname.includes("adminHome") &&
+                      "bg-graydark dark:bg-meta-4"
+                    }`}
+                  >
+                    <AiFillHome style={{ width: "20px", height: "20px" }} />
+                    Admin Home
+                  </NavLink>
+                </li>
+                {/* <!-- Admin Home --> */}
+
+                {/* <!-- Add Item --> */}
+                <li>
+                  <NavLink
+                    to="/dashboard/addItem"
+                    className={`group relative flex items-center gap-3 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                      pathname.includes("addItem") &&
+                      "bg-graydark dark:bg-meta-4"
+                    }`}
+                  >
+                    <AiOutlineAppstoreAdd
+                      style={{ width: "20px", height: "20px" }}
+                    />
+                    Add Item
+                  </NavLink>
+                </li>
+                {/* <!-- Add Item  --> */}
+
+                {/* <!-- Manage Booking --> */}
+                <li>
+                  <NavLink
+                    to="/dashboard/manageBooking"
+                    className={`group relative flex items-center gap-3 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                      pathname.includes("manageBooking") &&
+                      "bg-graydark dark:bg-meta-4"
+                    }`}
+                  >
+                    <MdManageSearch style={{ width: "20px", height: "20px" }} />
+                    Manage Booking
+                  </NavLink>
+                </li>
+                {/* <!-- Manage Booking  --> */}
+
+                {/* <!-- All User --> */}
+                <li>
+                  <NavLink
+                    to="/dashboard/allUsers"
+                    className={`group relative flex items-center gap-3 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                      pathname.includes("allUsers") &&
+                      "bg-graydark dark:bg-meta-4"
+                    }`}
+                  >
+                    <FaUsers style={{ width: "20px", height: "20px" }} />
+                    All User
+                  </NavLink>
+                </li>
+                {/* <!-- All User  --> */}
+              </ul>
