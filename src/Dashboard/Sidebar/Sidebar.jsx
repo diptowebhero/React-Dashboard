@@ -8,7 +8,7 @@ import { RxDashboard } from "react-icons/rx";
 import { NavLink, useLocation } from "react-router-dom";
 
 import { useState } from "react";
-import Logo from "./../../images/logo/logo-dark.svg";
+import Logo from "./../../images/logo/logo-icon.svg";
 
 // eslint-disable-next-line react/prop-types
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
@@ -26,7 +26,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
       {/* <!-- SIDEBAR HEADER --> */}
       <div className="flex items-center justify-between gap-2 px-6 py-6 lg:py-6">
         <NavLink to="/">
-          <img src={Logo} alt="Logo" />
+          <div className="flex items-center gap-4">
+            <img src={Logo} alt="Logo" />
+            <span className="text-xl font-bold">Dashboard</span>
+          </div>
         </NavLink>
 
         <button
@@ -133,7 +136,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                 <NavLink
                   to="/dashboard/payment"
                   className={`sidebar-menu-item ${
-                    pathname.includes("payment") && "bg-slate-300 dark:bg-meta-4"
+                    pathname.includes("payment") &&
+                    "bg-slate-300 dark:bg-meta-4"
                   }`}
                 >
                   <MdPayment className="w-5 h-5" />
@@ -241,7 +245,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                 <NavLink
                   to="/contact"
                   className={`sidebar-menu-item ${
-                    pathname.includes("contact") && "bg-slate-300 dark:bg-meta-4"
+                    pathname.includes("contact") &&
+                    "bg-slate-300 dark:bg-meta-4"
                   }`}
                 >
                   <MdEmail className="w-5 h-5" />
