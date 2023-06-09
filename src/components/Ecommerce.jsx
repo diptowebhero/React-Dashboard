@@ -3,7 +3,7 @@
 const Ecommerce = () => {
   return (
     <div>
-      <h1>This is e-commerce page</h1>
+      <h1 className="text-3xl font-bold">This is e-commerce page🙂</h1>
     </div>
   );
 };

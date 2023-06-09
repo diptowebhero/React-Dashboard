@@ -88,7 +88,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                 >
                   <li className="mb-2">
                     <NavLink
-                      to="/dashboard/analytics"
+                      to="/analytics"
                       className={`sidebar-submenu-item ${
                         pathname.includes("analytics") &&
                         "bg-slate-300 dark:bg-meta-4"
