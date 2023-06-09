@@ -8,7 +8,7 @@ import { RxDashboard } from "react-icons/rx";
 import { NavLink, useLocation } from "react-router-dom";
 
 import { useState } from "react";
-import Logo from "./../../images/logo/logo.svg";
+import Logo from "./../../images/logo/logo-dark.svg";
 
 // eslint-disable-next-line react/prop-types
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {

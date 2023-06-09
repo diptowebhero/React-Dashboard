@@ -23,7 +23,7 @@
 /* Drop Down style start*/
 
 .dropdown {
-  @apply absolute right-0 mt-4 flex w-60 flex-col rounded-sm border border-stroke bg-white shadow dark:border-strokedark dark:bg-boxDark -translate-y-96 transition-all duration-500 ease-linear;
+  @apply absolute right-0 mt-4 flex w-60 flex-col rounded-sm border text-black border-stroke bg-white shadow dark:text-white dark:border-strokedark dark:bg-boxDark -translate-y-96 transition-all duration-500 ease-linear;
 }
 
 .dropdown-content {

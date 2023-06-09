@@ -16,11 +16,11 @@ const DropdownUser = () => {
         className="flex items-center gap-4"
         to="#"
       >
-        <span className="hidden text-right lg:block">
+        <span className="hidden text-right md:block">
           <span className="block text-sm font-medium text-black dark:text-white">
             Dipto Das
           </span>
-          <span className="block text-xs">Web Designer</span>
+          <span className="block text-xs text-black dark:text-white">Web Designer</span>
         </span>
 
         <span className="h-12 w-12 rounded-full">
@@ -28,7 +28,7 @@ const DropdownUser = () => {
         </span>
 
         <svg
-          className={`hidden fill-current sm:block ${
+          className={`hidden text-black fill-current sm:block dark:text-slate-500 ${
             dropdownOpen ? "rotate-180" : ""
           }`}
           width="12"

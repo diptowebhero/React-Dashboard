@@ -1,7 +1,8 @@
 import { AiOutlineMenuFold } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-import Logo from "./../../images/logo/logo.svg";
+import Logo from "./../../images/logo/logo-dark.svg";
+import DarkModeSwitcher from "./DarkModeSwitcher";
 import DropdownUser from "./DropdownUser";
 const Header = ({
   // eslint-disable-next-line react/prop-types
@@ -9,10 +10,8 @@ const Header = ({
   // eslint-disable-next-line react/prop-types
   setSidebarOpen,
 }) => {
-
-
   return (
-    <header className="sticky top-0 bg:white shadow-lg flex w-full drop-shadow-1 dark:bg-boxDark dark:drop-shadow-none">
+    <header className="sticky top-0 bg-white shadow-lg flex w-full drop-shadow-1 dark:bg-boxDark dark:drop-shadow-none">
       <div className="flex flex-grow items-center justify-between py-4 px-4 shadow-2 md:px-6 2xl:px-11">
         <div className="flex items-center gap-2 sm:gap-4 lg:hidden">
           {/* <!-- Hamburger Toggle BTN --> */}
@@ -22,11 +21,11 @@ const Header = ({
               e.stopPropagation();
               setSidebarOpen(!sidebarOpen);
             }}
-            className="block rounded-sm border p-1.5 shadow-sm dark:border-strokedark dark:bg-boxDark lg:hidden"
+            className="block rounded-sm border p-1.5 shadow-sm border-slate-400 dark:border-strokedark dark:bg-boxDark lg:hidden"
           >
             <span className="relative block h-5 w-5.5 cursor-pointer">
               <AiOutlineMenuFold
-                className={`relative top-0 left-0 my-1 block h-5 w-0 rounded-sm  delay-[0] duration-200 ease-in-out ${
+                className={`relative top-0 left-0 my-1 block h-5 w-0 rounded-sm text-black  delay-[0] duration-200 ease-in-out dark:text-slate-300 ${
                   !sidebarOpen && "!w-full delay-300"
                 }`}
               />
@@ -69,16 +68,18 @@ const Header = ({
               <input
                 type="text"
                 placeholder="Type to search..."
-                className="w-full bg-transparent pr-4 pl-9 focus:outline-none"
+                className="w-full text-black bg-transparent pr-4 pl-9 focus:outline-none dark:text-white"
               />
             </div>
           </form>
         </div>
-        <div className="flex items-center gap-3 2xsm:gap-7">
+        <div className="flex items-center gap-3 lg:gap-7">
+          <ul className="flex items-center gap-2 lg:gap-4">
+            <DarkModeSwitcher />
+          </ul>
 
-                
-           {/* <!-- User Area --> */}
-           <DropdownUser />
+          {/* <!-- User Area --> */}
+          <DropdownUser />
           {/* <!-- User Area --> */}
         </div>
       </div>
